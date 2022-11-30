@@ -1,0 +1,6 @@
+[book]
+authors = ["Philipp Joram"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Philipp Joram's Place"
