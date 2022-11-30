@@ -26,8 +26,6 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    env:
-      HUGO_VERSION: 0.102.3
     steps:
       - name: Install Nix
         uses: cachix/install-nix-action@v18
@@ -42,11 +40,15 @@ jobs:
         uses: actions/configure-pages@v2
       - name: Build with mdBook
         run: |
-          nix build --out-link './site' '.#book'
+          nix build '.#book'
+      # XXX: https://github.com/actions/deploy-pages/issues/58
+      - name: "Fix permissions on build output"
+        run: |
+          cp --recursive --dereference --no-preserve=mode,ownership result public
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./site
+          path: ./public
 
   # Deployment job
   deploy:
