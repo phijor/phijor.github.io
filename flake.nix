@@ -15,10 +15,15 @@
     ...
   }: let
     inherit (flake-utils.lib) simpleFlake defaultSystems;
+    name = "phijor-me";
+    overlay = final: prev: {
+      ${name} = {
+        book = final.callPackage ./book.nix {};
+      };
+    };
   in
     simpleFlake {
-      inherit self nixpkgs;
-      name = "www";
+      inherit self nixpkgs name overlay;
       systems = defaultSystems;
       shell = ./shell.nix;
     };
