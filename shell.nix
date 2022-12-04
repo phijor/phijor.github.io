@@ -1,4 +1,7 @@
-{pkgs ? import <nixpkgs>}:
+{ pkgs ? import <nixpkgs> }:
 pkgs.mkShell {
-  buildInputs = [pkgs.mdbook];
+  buildInputs = [
+    pkgs.mdbook
+    pkgs.python3Packages.mdformat
+  ];
 }
