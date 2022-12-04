@@ -1,0 +1,10 @@
+-- The name of our library:
+name: playground
+
+-- Search for modules in directory of this file
+-- (i.e. the project root)
+include: .
+
+-- No dependencies or compiler flags (yet):
+depend:
+flags:
