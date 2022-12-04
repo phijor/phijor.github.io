@@ -16,9 +16,12 @@
   }: let
     inherit (flake-utils.lib) simpleFlake defaultSystems;
     name = "phijor-me";
-    overlay = final: prev: {
+    overlay = final: prev: let
+      book = final.callPackage ./book.nix {};
+    in {
       ${name} = {
-        book = final.callPackage ./book.nix {};
+        inherit book;
+        defaultPackage = book;
       };
     };
   in
