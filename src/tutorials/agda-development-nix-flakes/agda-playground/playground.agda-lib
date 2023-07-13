@@ -5,6 +5,7 @@ name: playground
 -- (i.e. the project root)
 include: .
 
--- No dependencies or compiler flags (yet):
-depend:
+-- This library has a dependency on the Agda standard library:
+depend: standard-library
+-- No compiler flags (yet):
 flags:

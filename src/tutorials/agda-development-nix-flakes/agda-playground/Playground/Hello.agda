@@ -1,6 +1,6 @@
 module Playground.Hello where
 
-open import Agda.Builtin.Nat
+open import Data.Nat.Base using (ℕ)
 
-foo : Nat
-foo = 42
+answer : ℕ
+answer = 42
