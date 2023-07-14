@@ -35,15 +35,19 @@ and enter the following code:
 You can re-use the shell from before and check whether Agda accepts the file:
 
 ```shellsession
-$ nix-shell --packages 'agda' --run "agda Playground/Hello.agda"
+$ nix-shell --packages 'agda' --run "agda --no-libraries Playground/Hello.agda"
 Checking Playground.Hello (/tmp/agda-playground/Playground/Hello.agda).
 ```
 
-To make sure that Agda recognizes our project as a library,
-create an [Agda library file][agda-lib] `playground.agda-lib`:
+We pass `--no-libraries` to temporarily ensure that Agda treats `Hello.agda` as a stand-alone module,
+without any library dependencies.
+In order to later specify dependencies we set up a proper Agda library,
+defined in a [library file][agda-lib].
+Create `playground.agda-lib` and enter the following:
 
 ```
 -- In playground.agda-lib:
+
 {{#include ./agda-playground/playground.agda-lib}}
 ```
 

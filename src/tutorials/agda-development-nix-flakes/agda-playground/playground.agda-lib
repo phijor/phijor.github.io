@@ -7,5 +7,6 @@ include: .
 
 -- This library has a dependency on the Agda standard library:
 depend: standard-library
+
 -- No compiler flags (yet):
 flags:

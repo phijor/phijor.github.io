@@ -1,6 +1,6 @@
 module Playground.Hello where
 
-open import Data.Nat.Base using (ℕ)
+open import Agda.Builtin.String using (String)
 
-answer : ℕ
-answer = 42
+hello : String
+hello = "Hello, world"
