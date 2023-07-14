@@ -1,0 +1,16 @@
+# Exclude generated files from stats and diffs for github-linguist.
+# https://github.com/github-linguist/linguist/blob/master/docs/overrides.md
+
+# Vendored JS syntax highlighting:
+theme/highlight.js linguist-vendored
+
+# `nix flake` compatibility files
+default.nix linguist-vendored
+shell.nix linguist-vendored
+
+# Lock-files for `nix flake`
+**/flake.lock linguist-generated
+
+# Mark Markdown files as detected
+# (they're not code to be code by default)
+*.md linguist-detected
