@@ -1,7 +1,8 @@
 { pkgs ? import <nixpkgs> }:
 pkgs.mkShell {
-  buildInputs = [
+  packages = [
     pkgs.mdbook
+    pkgs.mdbook-linkcheck
     pkgs.python3Packages.mdformat
   ];
 }
