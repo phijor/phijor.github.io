@@ -1,0 +1,7 @@
+---
+bibliography: publications/publications.bib
+nocite: "@*"
+csl: publications/natbib-plainnat-author-date.csl
+---
+
+# Publications

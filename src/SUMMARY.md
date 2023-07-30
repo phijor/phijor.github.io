@@ -2,6 +2,8 @@
 
 [About](./about.md)
 
+[Publications](./publications.md)
+
 # Tutorials
 
 - [Agda Development Setup with Nix Flakes](./tutorials/agda-development-nix-flakes.md)
