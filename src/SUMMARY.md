@@ -2,7 +2,10 @@
 
 [About](./about.md)
 
-[Publications](./publications.md)
+# Publications
+
+- [Overview](./publications.md)
+    - [Constructive Final Semantics of Finite Bags](./publications/2023-constructive-final-semantics-of-finite-bags.md)
 
 # Tutorials
 
