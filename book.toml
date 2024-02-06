@@ -7,6 +7,9 @@ title = "Philipp Joram's Place"
 
 [output.html]
 
+[output.html.print]
+enable = false
+
 [output.linkcheck]
 optional = true
 warning-policy = "error"
