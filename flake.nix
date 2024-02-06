@@ -18,9 +18,15 @@
     name = "phijor-me";
     overlay = final: prev: let
       book = final.callPackage ./book.nix {};
+      devShell = final.mkShell {
+        inputsFrom = [book];
+        packages = [
+          final.python3Packages.mdformat
+        ];
+      };
     in {
       ${name} = {
-        inherit book;
+        inherit book devShell;
         defaultPackage = book;
       };
     };
@@ -28,6 +34,5 @@
     simpleFlake {
       inherit self nixpkgs name overlay;
       systems = defaultSystems;
-      shell = ./shell.nix;
     };
 }
