@@ -16,19 +16,8 @@
   }: let
     inherit (flake-utils.lib) simpleFlake defaultSystems;
     name = "phijor-me";
-    overlay = final: prev: let
-      book = final.callPackage ./book.nix {};
-      devShell = final.mkShell {
-        inputsFrom = [book];
-        packages = [
-          final.python3Packages.mdformat
-        ];
-      };
-    in {
-      ${name} = {
-        inherit book devShell;
-        defaultPackage = book;
-      };
+    overlay = final: prev: {
+      ${name} = final.callPackages ./book.nix {};
     };
   in
     simpleFlake {
