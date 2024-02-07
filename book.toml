@@ -6,6 +6,9 @@ src = "src"
 title = "Philipp Joram's Place"
 
 [output.html]
+additional-css = [
+  "theme/external-links.css",
+]
 
 [output.html.print]
 enable = false
