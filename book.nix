@@ -1,6 +1,7 @@
 { stdenvNoCC
 , mkShell
 , mdbook
+, mdbook-admonish
 , mdbook-linkcheck
 , pandoc
 , python3Packages
@@ -37,7 +38,12 @@ let
   book = stdenvNoCC.mkDerivation {
     inherit name;
     src = lib.sources.cleanSource ./.;
-    nativeBuildInputs = [ mdbook mdbook-linkcheck publications ];
+    nativeBuildInputs = [
+      mdbook
+      mdbook-admonish
+      mdbook-linkcheck
+      publications
+    ];
     buildPhase = ''
       ln -s ${publications}/publications.md src/
       mkdir -p $out

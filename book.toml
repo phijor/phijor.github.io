@@ -5,9 +5,14 @@ multilingual = false
 src = "src"
 title = "Philipp Joram's Place"
 
+[preprocessor.admonish]
+command = "mdbook-admonish"
+assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
+
 [output.html]
 additional-css = [
   "theme/external-links.css",
+  "theme/mdbook-admonish.css",
 ]
 
 [output.html.print]
