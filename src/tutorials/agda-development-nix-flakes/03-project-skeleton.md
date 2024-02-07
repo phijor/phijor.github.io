@@ -56,7 +56,7 @@ Now, create and open the file `flake.nix`, and insert the following code
 
 ```nix
 # In flake.nix:
-{{#include ./agda-playground/flake.nix}}
+{{#include ./agda-playground/flake.nix:all}}
 ```
 
 Every `flake.nix` consists of three attributes:

@@ -1,3 +1,4 @@
+# ANCHOR: all
 {
   # 1.
   description = "An Agda Library set up with Nix Flakes";
@@ -35,9 +36,11 @@
       systems = defaultSystems;
 
       # 9.
+      # ANCHOR: shell
       shell = {pkgs}:
         pkgs.mkShell {
           inputsFrom = [pkgs.${name}.defaultPackage];
         };
+      # ANCHOR_END: shell
     };
 }
