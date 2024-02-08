@@ -5,6 +5,8 @@ multilingual = false
 src = "src"
 title = "Philipp Joram's Place"
 
+[preprocessor.external-links]
+
 [preprocessor.admonish]
 command = "mdbook-admonish"
 assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`

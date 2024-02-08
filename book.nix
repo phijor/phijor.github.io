@@ -3,6 +3,7 @@
 , mdbook
 , mdbook-admonish
 , mdbook-linkcheck
+, mdbook-external-links
 , pandoc
 , python3
 , lib
@@ -42,6 +43,7 @@ let
       mdbook
       mdbook-admonish
       mdbook-linkcheck
+      mdbook-external-links
       publications
     ];
     buildPhase = ''
