@@ -1,13 +1,15 @@
 /* Add FontAwesome fa-external icon after all non-relative links.
- * Do not add the icon whenever the link contains an image.
+ * Do not add the icon whenever the link contains and image.
  *
- * CSS `:has()` pseudo class:  https://webkit.org/blog/13096/css-has-pseudo-class/
- * FontAwesome as CSS content: https://stackoverflow.com/a/20782415
- * No line break in `::after`: https://stackoverflow.com/a/38418279
+ * https://stackoverflow.com/a/20782415
+ * https://webkit.org/blog/13096/css-has-pseudo-class/
+ * https://stackoverflow.com/a/18168287
  */
-a[target="_blank"]:not(:has(img))::after {
+a[href^="http://"]:not(:has(img))::after,
+a[href^="https://"]:not(:has(img))::after {
   font-family: FontAwesome;
   content: "\f08e"; /* fa-external-link */
-  padding-left: 0.2em; /* relative */
+  display: inline-block;
+  padding-left: 3px;
   vertical-align: middle;
 }

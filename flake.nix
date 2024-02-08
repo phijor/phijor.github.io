@@ -24,7 +24,6 @@
           });
         };
       };
-      mdbook-external-links = final.callPackage ./nix/mdbook-external-links.nix { };
       ${name} = final.callPackages ./book.nix {};
     };
   in
