@@ -125,14 +125,14 @@ result/Playground
 result/playground.agda-lib
 ```
 
-~~~admonish warning title="Warning: potential footgun"
+```admonish warning title="Warning: potential footgun"
 Notice that in the file listing above, `result/Everything.agda` is missing.
 By default, `agdaPackages.mkDerivation` will not include the module pointed to by
 `everythingFile` (nor its interface file) in the final derivation.
 This is by design, as oftentimes the `everythingFile` file is generated automatically
 at build-time and not meant to be part of the distributed library.
 Its only purpose is to serve as a module index.
-~~~
+```
 
 Now, whenever we make a change to the Agda code, we'll have to re-run `nix build` to type check it.
 This is cumbersome, and definitely not _interactive_ theorem proving.

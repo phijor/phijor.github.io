@@ -14,7 +14,7 @@ we declared a [shell environment][nix-dev-shell] in `flake.nix`:
 ```
 
 This allows us to enter a shell that exposes all *inputs* to the derivations listed in `inputsFrom`.
-In particular, those of `defaultPackage` &mdash; the Agda library we declared in `playground.nix`.
+In particular, those of `defaultPackage` — the Agda library we declared in `playground.nix`.
 One of its inputs is `agda` itself,
 and we can make it available in a new shell by invoking `nix develop`:[^bash-prompt]
 
@@ -34,7 +34,7 @@ Checking Everything (/[...]/agda-playground/Everything.agda).
  Checking Playground.WithStdlib (/[...]/agda-playground/Playground/WithStdlib.agda).
 ```
 
-~~~admonish tip title="Details: _How Agda finds dependencies_" collapsible=true
+`````admonish tip title="Details: _How Agda finds dependencies_" collapsible=true
 When using `agdaPackages.mkDerivation` to build our package, the real `agda` binary is wrapped with extra arguments.
 These arguments tell agda where to search for modules provided by other libraries:
 
@@ -53,7 +53,7 @@ The flag `--library-file=<...>` receives as an argument a file containing paths 
 agda-env> cat /nix/store/2r00jip3577bzvmw79pb0rwqq3czhmq9-libraries
 /nix/store/bj9k8disw7pjmwbybniqmafzgrfbk6zg-standard-library-1.7.1/standard-library.agda-lib
 ````
-~~~
+`````
 
 This environment also contains `agda-mode`, the program that powers interactive editing in many editors.
 If you've set up Emacs following the [official instructions][agda-mode],
@@ -96,11 +96,11 @@ direnv: nix-direnv: renewed cache
 $
 ```
 
-~~~admonish tip title="Details: _<code>direnv</code> caching_" collapsible=true
+```admonish tip title="Details: _<code>direnv</code> caching_" collapsible=true
 In the above output, `nix-direnv` tells us that it has renewed its *cache*:
 Flake environments are cached per directory
 and therefore load almost instantaneously when changing directory!
-~~~
+```
 
 Notice how were not thrown into a subshell, as opposed to when using `nix develop`.
 We are still in the same interactive shell as before, but `direnv` has
@@ -119,8 +119,8 @@ perhaps a desktop shortcut or an application launcher.
 In this case you might want to consider a plug-in for your editor
 that provides `direnv` integration, such as:
 
-* _VSCode_: [`direnv/direnv-vscode`](https://github.com/direnv/direnv-vscode)
-* _Emacs_: [`wbolster/emacs-direnv`](https://github.com/wbolster/emacs-direnv)
+- _VSCode_: [`direnv/direnv-vscode`](https://github.com/direnv/direnv-vscode)
+- _Emacs_: [`wbolster/emacs-direnv`](https://github.com/wbolster/emacs-direnv)
 
 ### Conclusion
 
@@ -139,6 +139,6 @@ that is loaded automatically whenever you hack on files in a project!
 [agda-mode]: https://agda.readthedocs.io/en/latest/getting-started/installation.html#step-3-running-the-agda-mode-program
 [cornelis]: https://github.com/isovector/cornelis
 [direnv]: https://direnv.net/
+[home-manager]: https://nix-community.github.io/home-manager/
 [nix-dev-shell]: https://nix.dev/tutorials/first-steps/declarative-shell.html
 [nix-direnv]: https://github.com/nix-community/nix-direnv
-[home-manager]: https://nix-community.github.io/home-manager/

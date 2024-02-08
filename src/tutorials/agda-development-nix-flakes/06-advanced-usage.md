@@ -11,4 +11,3 @@
 ### Cubical Agda: specifying Agda options
 
 ### Overriding libraries
-

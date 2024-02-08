@@ -1,7 +1,7 @@
 # Constructive Final Semantics of Finite Bags
 
 [![GitHub: phijor/agda-cubical-multiset](https://img.shields.io/badge/GitHub-phijor%2Fagda--cubical--agda-2EBC4F)][agda-cubical-multiset]
-[![Agda: README.agda](https://img.shields.io/badge/Agda-README.agda-orange)][README]
+[![Agda: README.agda](https://img.shields.io/badge/Agda-README.agda-orange)][readme]
 [![DOI: 10.4230/LIPIcs.ITP.2023.20](https://img.shields.io/badge/DOI-10.4230%2FLIPIcs.ITP.2023.20-085DA6.svg?logo=DOI)][doi]
 
 ## Abstract
@@ -26,8 +26,8 @@ as part of [LIPIcs, Volume 268, ITP 2023](https://www.dagstuhl.de/dagpub/978-3-9
 ## Formalization
 
 The paper comes with an Agda formalization, based on the [Agda Cubical](https://github.com/agda/cubical) library,
-available [here][README].
+available [here][readme].
 
 [agda-cubical-multiset]: https://github.com/phijor/agda-cubical-multiset
-[README]: https://phijor.me/agda-cubical-multiset/README.html
 [doi]: https://doi.org/10.4230/LIPIcs.ITP.2023.20
+[readme]: https://phijor.me/agda-cubical-multiset/README.html
