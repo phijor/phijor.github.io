@@ -1,9 +1,9 @@
 ## Setting up a Project Skeleton
 
 In a first iteration, we will set up a basic project that contains some Agda code,
-and add a Flake that describes how to...
+and add a Flake that...
 
-1. install Agda and the Agda [standard library][agda-stdlib]
+1. describes how to install Agda and the Agda [standard library][agda-stdlib]
 1. has instructions for type-checking our code
 
 We'll call our project _Playground_.
@@ -17,7 +17,7 @@ $ cd agda-playground
 In the following, we call this directory the _(project) root directory_.
 If not stated otherwise, files are created and edited in the project root directory.
 
-Next, create the module structure for our project:
+Next, we create the module structure for our project:
 
 ```shellsession
 $ mkdir Playground
@@ -71,7 +71,7 @@ Let's go over them in detail:
    - the `nixpkgs` package index from
      [Github](https://github.com/NixOS/nixpkgs/tree/nixpkgs-unstable),
      checking out the branch `nixpkgs-unstable`.
-   - [`flake-utils`](https://github.com/numtide/flake-utils#readme),
+   - [flake-utils](https://github.com/numtide/flake-utils#readme),
      a self-contained library to help us write less boiler-plate code
 
 1. `outputs` is a function from the inputs (as downloaded and stored in your system)
@@ -85,15 +85,15 @@ Let's go over them in detail:
 1. ...assign a name for later use...
 
 1. ...and then create an [Overlay][nix-overlay] that contains one attribute `${name}`
-   (i.e. `"playground"`).  Overlays are Nixpkgs's way of extending the package index
-   by new packages or patching existing ones.
+   (i.e. `"playground"`).  Overlays are `nixpkgs`'s way of extending the package index
+   with new packages or patching existing ones.
 
 1. We assign an attribute set to the key `${name}` which contains one package
-   built from a nix expressions in the file `./playground.nix`.
+   built from a Nix expression in the file `./playground.nix`.
    This file contains the actual definition of our package, and we'll go over it [later](./04-type-checking.md).
 
 1. To return the package in a format that `nix` expects,
-   we use the library function `simpleFlake` to put our package together:
+   we use the library function `simpleFlake` that puts our package together:
    We specify which snapshot of `nixpkgs` to use,
    what the name of our package is,
    which overlay to use (this contains our package),
@@ -112,7 +112,7 @@ error: getting status of '/nix/store/[...]-source/agda-playground/playground.nix
 (use '--show-trace' to show detailed location information)
 ```
 
-1. `nix` created the `flake.lock` contaning snapshots of the inputs for us.
+1. `nix` created the `flake.lock` containing snapshots of the inputs for us.
    It's a JSON file, so we can inspect it using [`jq`](https://stedolan.github.io/jq/):
    ```shellsession
    $ nix-shell -p 'jq' --run "jq '.nodes.nixpkgs.locked.rev' < flake.lock"
@@ -120,6 +120,8 @@ error: getting status of '/nix/store/[...]-source/agda-playground/playground.nix
    ```
 1. `nix` cannot find `playground.nix`.
    This is where our package description goes.
+
+Next, let us put together a Nix package for our Agda project in `playground.nix`.
 
 [agda-lib]: https://agda.readthedocs.io/en/latest/tools/package-system.html#library-files
 [agda-stdlib]: https://github.com/agda/agda-stdlib#readme

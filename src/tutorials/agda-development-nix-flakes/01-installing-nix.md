@@ -44,7 +44,7 @@ $ nix-shell --packages 'agda' --run "agda --version"
 Agda version 2.6.2.2
 ```
 
-> ℹ️ **NOTE:**
->
-> This might take some time as Nix will have to download Agda and its dependencies.
-> Though it's definitely faster than compiling Agda yourself.
+~~~admonish note
+It might take some time as Nix will have to download Agda and its dependencies.
+Though it's definitely faster than compiling Agda yourself.
+~~~

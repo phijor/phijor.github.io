@@ -13,19 +13,19 @@ This is similar to how other language-specific package managers work:
 [_Cargo_][cargo] records dependencies in `Cargo.toml` and
 [pins](https://doc.rust-lang.org/stable/cargo/guide/cargo-toml-vs-cargo-lock.html) them in `Cargo.lock`.
 
-> ⚠ **WARNING**:
->
-> Nix Flakes are an unstable feature of Nix.
-> Things might've changed slightly since this tutorial was written.
->
-> In any case: Head over to the Wiki for instructions on how to [enable Nix Flakes][flake-enable].
+~~~admonish warning
+Nix Flakes are an unstable feature of Nix.
+Things might've changed slightly since this tutorial was written.
 
-> ℹ️ **NOTE:**
->
-> This is not a tutorial on the Nix Language.
-> Feel free to familiarize yourself with the language by either reading the superb
-> [Nix Pills][nix-pills] series of tutorials,
-> or [Chapter on writing Nix expressions][nix-lang-tut] of the Nix manual.
+In any case: Head over to the Wiki for instructions on how to [enable Nix Flakes][flake-enable].
+~~~
+
+~~~admonish note
+This is not a tutorial on the Nix Language.
+Feel free to familiarize yourself with the language by either reading the superb
+[Nix Pills][nix-pills] series of tutorials,
+or [Chapter on writing Nix expressions][nix-lang-tut] of the Nix manual.
+~~~
 
 [cargo]: https://doc.rust-lang.org/stable/cargo/
 [flake]: https://nixos.wiki/wiki/Flakes
