@@ -3,8 +3,8 @@
 In a first iteration, we will set up a basic project that contains some Agda code,
 and add a Flake that...
 
-1. describes how to install Agda and the Agda [standard library][agda-stdlib]
-1. has instructions for type-checking our code
+1. Describes how to install Agda and the Agda [standard library][agda-stdlib].
+1. Has instructions for type-checking our code.
 
 We'll call our project _Playground_.
 First, create a new directory that will contain the project, and enter it:
@@ -68,11 +68,11 @@ Let's go over them in detail:
 1. `inputs` to the Flake are Nix expressions that are fetched from elsewhere.
    In our case, we fetch two inputs:
 
-   - the `nixpkgs` package index from
-     [Github](https://github.com/NixOS/nixpkgs/tree/nixpkgs-unstable),
+   - The `nixpkgs` package index from
+     [GitHub](https://github.com/NixOS/nixpkgs/tree/nixpkgs-unstable),
      checking out the branch `nixpkgs-unstable`.
    - [flake-utils](https://github.com/numtide/flake-utils#readme),
-     a self-contained library to help us write less boiler-plate code
+     a self-contained library to help us write less boilerplate code.
 
 1. `outputs` is a function from the inputs (as downloaded and stored in your system)
    to any number of build artifacts.
@@ -98,6 +98,7 @@ Let's go over them in detail:
    what the name of our package is,
    which overlay to use (this contains our package),
    and which systems the package can be built for.
+   In turn, `simpleFlake` returns an output in the correct format.
 
 1. We set up a custom interactive shell that has access to all build dependencies of our package.
    We will discuss how to use it in a [later chapter](./05-dev-shell.md).

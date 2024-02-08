@@ -8,7 +8,7 @@ At night, I enjoy tinkering with my computer.
 ## Me on the Web
 
 - Mastodon: <a rel="me" href="https://types.pl/@phijor" target="_blank">@phijor@types.pl</a>
-- Github:   <a rel="me" href="https://github.com/phijor" target="_blank"><i class="fa fa-github"></i> @phijor</a>
+- GitHub:   <a rel="me" href="https://github.com/phijor" target="_blank"><i class="fa fa-github"></i> @phijor</a>
 - Twitter:  <a rel="me" href="https://twitter.com/_phijor" target="_blank"><i class="fa fa-twitter"></i> @\_phijor</a>
 
 [ioc-homepage]: https://www.ioc.ee/~philipp/

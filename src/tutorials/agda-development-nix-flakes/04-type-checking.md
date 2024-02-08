@@ -39,7 +39,7 @@ The file contains the following:
    or even by [respecting your `.gitignore`][pkgs-gitignore].
 
 1. `buildInputs` contains a list of dependencies necessary to build our library.
-   For now we will depend on the [Agda standard library](https://github.com/agda/agda-stdlib),
+   For now, we will depend on the [Agda standard library](https://github.com/agda/agda-stdlib),
    packaged in `nixpkgs` at `agdaPackages.standard-library`.
    Later we will see how to use libraries that require special Agda options
    (such as [Cubical Agda](./06-advanced-usage.md#cubical-agda-specifying-agda-options)),
