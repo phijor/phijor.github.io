@@ -29,5 +29,8 @@ or [Chapter on writing Nix expressions][nix-lang-tut] of the Nix manual.
 
 [cargo]: https://doc.rust-lang.org/stable/cargo/
 [flake]: https://nixos.wiki/wiki/Flakes
+[flake-enable]: https://nixos.wiki/wiki/Flakes#Enable_flakes
 [nix-lang]: https://nixos.wiki/wiki/Overview_of_the_Nix_Language
+[nix-lang-tut]: https://nixos.org/manual/nix/stable/#chap-writing-nix-expressions
+[nix-pills]: https://nixos.org/guides/nix-pills/
 [stack]: https://docs.haskellstack.org/en/stable/
