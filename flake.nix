@@ -24,7 +24,7 @@
           });
         };
       };
-      ${name} = final.callPackages ./book.nix {};
+      ${name} = final.callPackages ./nix/all-packages.nix { inherit name; };
     };
   in
     simpleFlake {
