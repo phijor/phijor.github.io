@@ -2,6 +2,7 @@
   mkShell,
   callPackage,
   python3,
+  mdformat,
   lib,
   name ? "phijor.me-book",
   ...
@@ -12,14 +13,12 @@
   book = callPackage ./book.nix {
     inherit name publications;
   };
-  mdformat = python3.withPackages (p: [
-    (p.mdformat.withPlugins [p.mdformat-footnote])
-  ]);
+  mdformatWithPlugins = mdformat.withPlugins (p: [p.mdformat-footnote]);
   devShell = mkShell {
     inputsFrom = [book];
-    packages = [mdformat];
+    packages = [mdformatWithPlugins];
   };
 in {
-  inherit publications book mdformat devShell;
+  inherit publications book mdformatWithPlugins devShell;
   defaultPackage = book;
 }
