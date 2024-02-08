@@ -85,7 +85,7 @@ so this is as easy as
 [enabling `direnv`](https://nix-community.github.io/home-manager/options.xhtml#opt-programs.direnv.enable)
 and [`nix-direnv`](https://nix-community.github.io/home-manager/options.xhtml#opt-programs.direnv.nix-direnv.enable).
 We can then go ahead and write our hook to load the Agda environment,
-and put it on `direnv`'s list of allowed environments:
+and put it on `direnv`'s list of allowed environments:[^direnv-allow]
 
 ```shellsession
 $ echo "use flake" > .envrc # Write flake hook to .envrc
@@ -129,6 +129,12 @@ that is loaded automatically whenever you hack on files in a project!
 
 [^bash-prompt]: Passing `--bash-prompt` is optional.
     We do it here to distinguish between the different shells.
+
+[^direnv-allow]: `direnv` will not blindly execute an `.envrc` it finds in the current directory.
+    You have to explicitly allow the automatic execution of these files.
+    By issuing `direnv allow`, the `.envrc` in the current directory
+    is put onto `direnv`'s allow-list.
+    This can be reverted by issuing `direnv revoke`.
 
 [agda-mode]: https://agda.readthedocs.io/en/latest/getting-started/installation.html#step-3-running-the-agda-mode-program
 [cornelis]: https://github.com/isovector/cornelis
