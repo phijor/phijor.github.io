@@ -74,7 +74,7 @@ the shell itself is also rather bare-bones.
 This is rather upsetting for anyone who has put time into customizing their interactive shell!
 
 We are going to automate the process of loading the environment by using [direnv],
-together with its Nix integration provided [nix-direnv].
+together with its Nix integration provided by [nix-direnv].
 `direnv` works by hooking your shell and running some code whenever
 you change into a directory containing a file called `.envrc`.
 It is there that we put the instructions to load the Agda environment.
@@ -85,7 +85,7 @@ so this is as easy as
 [enabling `direnv`](https://nix-community.github.io/home-manager/options.xhtml#opt-programs.direnv.enable)
 and [`nix-direnv`](https://nix-community.github.io/home-manager/options.xhtml#opt-programs.direnv.nix-direnv.enable).
 We can then go ahead and write our hook to load the Agda environment,
-and put it on `direnv`'s list of allowed environment:
+and put it on `direnv`'s list of allowed environments:
 
 ```shellsession
 $ echo "use flake" > .envrc # Write flake hook to .envrc
