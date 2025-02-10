@@ -6,6 +6,7 @@
 
 - [Overview](./publications.md)
   - [Constructive Final Semantics of Finite Bags](./publications/2023-constructive-final-semantics-of-finite-bags.md)
+  - [Data Types with Symmetries via Action Containers](./publications/2025-data-types-with-symmetries-via-action-containers.md)
 
 # Tutorials
 
