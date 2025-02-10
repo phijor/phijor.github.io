@@ -3,8 +3,8 @@
 , mdbook
 , mdbook-admonish
 , mdbook-linkcheck
+, mdformat
 , pandoc
-, python3
 , lib
 , name ? "phijor.me-book"
 , ...
@@ -50,15 +50,13 @@ let
       mdbook build --dest-dir $out
     '';
   };
-  mdformat = python3.withPackages (p: [
-      (p.mdformat.withPlugins [ p.mdformat-footnote ])
-    ]);
+  mdformat' = mdformat.withPlugins (p: [ p.mdformat-footnote ]);
   devShell = mkShell {
     inputsFrom = [ book ];
-    packages = [ mdformat ];
+    packages = [ mdformat' ];
   };
 in
 {
-  inherit publications book mdformat devShell;
+  inherit publications book mdformat' devShell;
   defaultPackage = book;
 }

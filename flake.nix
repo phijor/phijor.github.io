@@ -17,13 +17,6 @@
     inherit (flake-utils.lib) simpleFlake defaultSystems;
     name = "phijor-me";
     overlay = final: prev: {
-      python3 = prev.python3.override {
-        packageOverrides = py-final: py-prev: {
-          mdformat-footnote = py-prev.mdformat-footnote.overrideAttrs (old: {
-            propagatedBuildInputs = old.buildInputs;
-          });
-        };
-      };
       ${name} = final.callPackages ./book.nix {};
     };
   in
