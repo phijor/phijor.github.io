@@ -8,14 +8,14 @@
 
 We study two kinds of containers for data types with symmetries in homotopy type theory,
 and clarify their relationship by introducing the intermediate notion of action containers.
-Quotient containers are set-valued containers with groups of permissible permutations of positions, interpreted as analytic functors on the category of sets.
+Quotient containers are set-valued containers with groups of permissible permutations of positions, interpreted as (possibly non-finitary) analytic functors on the category of sets.
 Symmetric containers encode symmetries in a groupoid of shapes, and are interpreted accordingly as polynomial functors on the 2-category of groupoids.
 
 Action containers are endowed with groups that act on their positions, with morphisms preserving the actions.
 We show that, as a category, action containers are equivalent to the free coproduct completion of a category of group actions.
 We derive that they model non-inductive single-variable strictly positive types in the sense of [Abbott et al.][categories-of-containers]:
 The category of action containers is closed under arbitrary (co)products and exponentiation with constants.
-We equip this category with the structure of a locally groupoidal 2-category, and prove that this corresponds to the full 2-subcategory of symmetric containers whose shapes have pointed connected components.
+We equip this category with the structure of a locally groupoidal 2-category, and prove that it locally embeds into the 2-category of symmetric containers.
 This follows from the embedding of a 2-category of groups into the 2-category of groupoids, extending the delooping construction.
 
 ## Resources
