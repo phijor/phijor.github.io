@@ -2,7 +2,7 @@
 
 [![GitHub: phijor/cubical-containers](https://img.shields.io/badge/GitHub-phijor%2Fcubical--containers-2EBC4F)][cubical-containers]
 [![Agda: README.agda](https://img.shields.io/badge/Agda-README.agda-orange)][readme]
-[![PDF: Draft](https://img.shields.io/badge/PDF-Draft-red)][draft-pdf]
+[![DOI: 10.4230/LIPIcs.TYPES.2024.6](https://img.shields.io/badge/DOI-10.4230%2FLIPIcs.TYPES.2024.6-085DA6.svg?logo=DOI)][doi]
 
 ## Abstract
 
@@ -18,15 +18,17 @@ The category of action containers is closed under arbitrary (co)products and exp
 We equip this category with the structure of a locally groupoidal 2-category, and prove that it locally embeds into the 2-category of symmetric containers.
 This follows from the embedding of a 2-category of groups into the 2-category of groupoids, extending the delooping construction.
 
+The full paper is avaiable at [10.4230/LIPIcs.TYPES.2024.6][doi]
+as part of [LIPIcs, Volume 336, TYPES 2024](https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-336).
+
 ## Resources
 
-* a [draft][draft-pdf] of the paper
 * a formalization of the results, interactively explorable [online][readme] ([source code][cubical-containers])
 * [slides][slides-pdf] for a talk on the topic, held in the [CS Theory Seminar (TSEM)][TSEM] at Tallinn University of Technology
 
 [cubical-containers]: https://github.com/phijor/cubical-containers
 [readme]: https://phijor.me/cubical-containers/README.html
-[draft-pdf]: ./2025-data-types-with-symmetries-via-action-containers.pdf
 [categories-of-containers]: https://doi.org/10.1016/j.tcs.2005.06.002
 [TSEM]: https://niccoloveltri.github.io/tsem24/joram.html
 [slides-pdf]: ./2025-TSEM-action-containers.pdf
+[doi]: https://doi.org/10.4230/LIPIcs.TYPES.2024.6
