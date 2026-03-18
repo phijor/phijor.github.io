@@ -21,14 +21,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Check out repository"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: "Install Nix"
-        uses: DeterminateSystems/nix-installer-action@v9
-      - name: "Set up Nix cache"
-        uses: DeterminateSystems/magic-nix-cache-action@v3
+        uses: cachix/install-nix-action@v31
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
       - name: Build with mdBook
         run: |
           nix build '.#book'
